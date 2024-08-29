@@ -2,7 +2,9 @@ import React from "react";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }: any) => {
   const handleHello = () => {
-    const botMessage = createChatBotMessage("Bonjour ! Tapez contact, internet ou services...");
+    const botMessage = createChatBotMessage(
+      "Bonjour ! Tapez contact, internet ou services..."
+    );
 
     setState((prev: any) => ({
       ...prev,
@@ -46,6 +48,17 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: any) => {
     }));
   };
 
+  const handleUnknown = () => {
+    const botMessage = createChatBotMessage(
+      "Demande invalide ! Tapez contact, internet ou services..."
+    );
+
+    setState((prev: any) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
   return (
     <div>
       {React.Children.map(children, (child) => {
@@ -55,6 +68,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: any) => {
             handleQuickServices,
             handleInternetPackages,
             handleContact,
+            handleUnknown,
           },
         });
       })}

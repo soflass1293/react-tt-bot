@@ -1,5 +1,3 @@
-import React from "react";
-
 const services = [
   {
     title: "1.25 Go à 5 dinars",

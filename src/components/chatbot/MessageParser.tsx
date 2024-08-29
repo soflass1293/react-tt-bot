@@ -1,7 +1,6 @@
-// in MessageParser.jsx
 import React from "react";
 
-const MessageParser = ({ children, actions }) => {
+const MessageParser = ({ children, actions }: any) => {
   const parse = (payload: string) => {
     const message = payload.toLowerCase();
     if (
@@ -10,26 +9,22 @@ const MessageParser = ({ children, actions }) => {
       message.includes("bonjour")
     ) {
       actions.handleHello();
-    }
-
-    if (message.includes("service")) {
+    } else if (message.includes("service")) {
       actions.handleQuickServices();
-    }
-
-    if (
+    } else if (
       message.includes("internet") ||
       message.includes("forfait") ||
       message.includes("net")
     ) {
       actions.handleInternetPackages();
-    }
-
-    if (
+    } else if (
       message.includes("contact") ||
       message.includes("phone") ||
       message.includes("maps")
     ) {
       actions.handleContact();
+    } else {
+      actions.handleUnknown();
     }
   };
 

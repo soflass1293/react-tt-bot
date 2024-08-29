@@ -1,20 +1,18 @@
-import React from "react";
-
 const services = [
   {
     title: "Téléphone",
     url: "tel:1298",
-    target: ""
+    target: "",
   },
   {
     title: "Téléphone",
     url: "tel:71001298",
-    target: ""
+    target: "",
   },
   {
     title: "Nos espaces TT",
     url: "https://www.tunisietelecom.tn/particulier/trouver-un-espace-tt/",
-    target: "_blank"
+    target: "_blank",
   },
 ];
 

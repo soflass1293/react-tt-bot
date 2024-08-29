@@ -1,7 +1,7 @@
 import { createChatBotMessage } from "react-chatbot-kit";
-import QuickServices from "./widgets/quick-services";
-import InternetPackages from "./widgets/internet-packages";
 import Contact from "./widgets/contact";
+import InternetPackages from "./widgets/internet-packages";
+import QuickServices from "./widgets/quick-services";
 
 const config = {
   // @ts-ignore
