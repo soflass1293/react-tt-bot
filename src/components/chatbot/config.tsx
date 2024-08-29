@@ -5,19 +5,25 @@ import Contact from "./widgets/contact";
 
 const config = {
   // @ts-ignore
-  initialMessages: [createChatBotMessage(`Bonjour ! Tapez contact, internet ou services...`)],
+  botName: "TT Bot",
+  initialMessages: [
+    createChatBotMessage(
+      `Bonjour ! Tapez contact, internet ou services...`,
+      {}
+    ),
+  ],
   widgets: [
     {
       widgetName: "quick-services",
-      widgetFunc: (props) => <QuickServices {...props} />,
+      widgetFunc: () => <QuickServices />,
     },
     {
       widgetName: "internet-packages",
-      widgetFunc: (props) => <InternetPackages {...props} />,
+      widgetFunc: () => <InternetPackages />,
     },
     {
       widgetName: "contact",
-      widgetFunc: (props) => <Contact {...props} />,
+      widgetFunc: () => <Contact />,
     },
   ],
 };
