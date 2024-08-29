@@ -13,7 +13,7 @@ const InternetPackages = () => {
   return (
     <>
       {services.map(({ title, url }) => (
-        <div className="my-2 text-blue-500">
+        <div key={title} className="my-2 text-blue-500">
           <a href={url} target="_blank" rel="noreferrer noopener">
             {title} ➡
           </a>

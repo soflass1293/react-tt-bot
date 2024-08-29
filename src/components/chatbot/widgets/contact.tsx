@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <>
       {services.map(({ title, url, target }) => (
-        <div className="my-2 text-blue-500">
+        <div key={title} className="my-2 text-blue-500">
           <a href={url} target={target} rel="noreferrer noopener">
             {title} ➡
           </a>
